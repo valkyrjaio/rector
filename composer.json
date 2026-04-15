@@ -17,7 +17,7 @@
   ],
   "require"           : {
     "php"           : ">=8.4",
-    "rector/rector" : "^2.3.9"
+    "rector/rector" : "^2.4.1"
   },
   "autoload"          : {
     "psr-4" : {
