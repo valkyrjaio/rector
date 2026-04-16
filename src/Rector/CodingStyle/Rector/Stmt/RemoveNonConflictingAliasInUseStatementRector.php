@@ -14,6 +14,7 @@ declare(strict_types=1);
 namespace Valkyrja\Rector\CodingStyle\Rector\Stmt;
 
 use Nette\Utils\Strings;
+use Override;
 use PhpParser\Comment\Doc;
 use PhpParser\Node;
 use PhpParser\Node\Identifier;
@@ -61,11 +62,13 @@ final class RemoveNonConflictingAliasInUseStatementRector extends AbstractRector
     /**
      * @return array<class-string<Node>>
      */
+    #[Override]
     public function getNodeTypes(): array
     {
         return [FileNode::class, Namespace_::class];
     }
 
+    #[Override]
     public function refactor(Node $node): FileNode|Node|Namespace_|null
     {
         if ($node instanceof FileNode && $node->isNamespaced()) {
