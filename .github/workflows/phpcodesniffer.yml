@@ -26,4 +26,5 @@ jobs:
           - 'functions/**/*.php'
           - 'src/**/*.php'
           - 'tests/**/*.php'
-          - 'composer.json'    secrets: inherit
+          - 'composer.json'
+    secrets: inherit
