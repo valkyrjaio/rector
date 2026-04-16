@@ -4,8 +4,9 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b9dc5d32a7947b980d693585dac9f64a",
-    "packages": [
+    "content-hash": "fd6cdd573db062f158677ae61fea16ef",
+    "packages": [],
+    "packages-dev": [
         {
             "name": "phpstan/phpstan",
             "version": "2.1.48",
@@ -118,56 +119,8 @@
                 }
             ],
             "time": "2026-04-08T08:43:56+00:00"
-        },
-        {
-            "name": "valkyrja/rector",
-            "version": "v26.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/valkyrjaio/rector.git",
-                "reference": "4bf60d7da8abbb86ddd9e43795a06430bf00066a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/valkyrjaio/rector/zipball/4bf60d7da8abbb86ddd9e43795a06430bf00066a",
-                "reference": "4bf60d7da8abbb86ddd9e43795a06430bf00066a",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.4",
-                "rector/rector": "^2.4.1"
-            },
-            "type": "project",
-            "autoload": {
-                "psr-4": {
-                    "Valkyrja\\Rector\\": "src/Rector"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Melech Mizrachi",
-                    "email": "melechmizrachi@gmail.com"
-                }
-            ],
-            "description": "Rector for the Valkyrja Project.",
-            "homepage": "https://www.valkyrja.io/",
-            "keywords": [
-                "ci",
-                "rector",
-                "valkyrja"
-            ],
-            "support": {
-                "issues": "https://github.com/valkyrjaio/rector/issues",
-                "source": "https://github.com/valkyrjaio/rector/tree/v26.0.1"
-            },
-            "time": "2026-04-15T22:45:48+00:00"
         }
     ],
-    "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {},
