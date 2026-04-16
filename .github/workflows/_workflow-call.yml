@@ -11,6 +11,10 @@ on:
         description: 'Path to the CI directory (containing composer.json and the rector config)'
         type: string
         default: '.github/ci/rector'
+      extensions:
+        description: 'PHP extensions to install'
+        type: string
+        default: 'mbstring, intl'
       paths:
         description: >
           YAML filter spec for dorny/paths-filter.
@@ -54,7 +58,7 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ inputs.php-version }}
-          extensions: mbstring, intl
+          extensions: ${{ inputs.extensions }}
 
       - name: Install Composer dependencies
         if: steps.changes.outputs.files == 'true'
