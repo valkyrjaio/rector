@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3aaad1c4b73c0fc833f7987e230f01f8",
+    "content-hash": "fee8313b8e50cc78917a98dc733d04a4",
     "packages": [],
     "packages-dev": [
         {
@@ -3720,16 +3720,16 @@
         },
         {
             "name": "valkyrja/phpunit",
-            "version": "v26.0.0",
+            "version": "v26.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/valkyrjaio/phpunit.git",
-                "reference": "1b5ec53d33f63dcb701e7ddaa4b1f5db8d00c390"
+                "reference": "af9e942467af9084b108a33b12dd2e41cf2c3290"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/valkyrjaio/phpunit/zipball/1b5ec53d33f63dcb701e7ddaa4b1f5db8d00c390",
-                "reference": "1b5ec53d33f63dcb701e7ddaa4b1f5db8d00c390",
+                "url": "https://api.github.com/repos/valkyrjaio/phpunit/zipball/af9e942467af9084b108a33b12dd2e41cf2c3290",
+                "reference": "af9e942467af9084b108a33b12dd2e41cf2c3290",
                 "shasum": ""
             },
             "require": {
@@ -3765,9 +3765,9 @@
             ],
             "support": {
                 "issues": "https://github.com/valkyrjaio/phpunit/issues",
-                "source": "https://github.com/valkyrjaio/phpunit/tree/v26.0.0"
+                "source": "https://github.com/valkyrjaio/phpunit/tree/v26.1.0"
             },
-            "time": "2026-04-16T02:45:43+00:00"
+            "time": "2026-04-16T04:41:45+00:00"
         }
     ],
     "aliases": [],

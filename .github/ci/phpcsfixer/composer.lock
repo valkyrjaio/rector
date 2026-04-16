@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0834bddfd2e7ab1dc3c8d816fdc2aa5e",
+    "content-hash": "54c9ce4e9fc34a4a3f3d9477ee999c6e",
     "packages": [],
     "packages-dev": [
         {
@@ -2749,16 +2749,16 @@
         },
         {
             "name": "valkyrja/phpcsfixer",
-            "version": "v26.0.1",
+            "version": "v26.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/valkyrjaio/phpcsfixer.git",
-                "reference": "48041f12bfaabbfe5da8ad9f8bcc80b3055ff62a"
+                "reference": "5a888963803c5a9be6ba22820d54a927120a8a8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/valkyrjaio/phpcsfixer/zipball/48041f12bfaabbfe5da8ad9f8bcc80b3055ff62a",
-                "reference": "48041f12bfaabbfe5da8ad9f8bcc80b3055ff62a",
+                "url": "https://api.github.com/repos/valkyrjaio/phpcsfixer/zipball/5a888963803c5a9be6ba22820d54a927120a8a8f",
+                "reference": "5a888963803c5a9be6ba22820d54a927120a8a8f",
                 "shasum": ""
             },
             "require": {
@@ -2790,9 +2790,9 @@
             ],
             "support": {
                 "issues": "https://github.com/valkyrjaio/phpcsfixer/issues",
-                "source": "https://github.com/valkyrjaio/phpcsfixer/tree/v26.0.1"
+                "source": "https://github.com/valkyrjaio/phpcsfixer/tree/v26.1.0"
             },
-            "time": "2026-04-15T22:29:34+00:00"
+            "time": "2026-04-16T04:41:44+00:00"
         }
     ],
     "aliases": [],
