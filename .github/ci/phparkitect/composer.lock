@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "009a1baec76d54ecc95166d91fd6d384",
+    "content-hash": "20ef251eb20f4398359707865aed9141",
     "packages": [],
     "packages-dev": [
         {
@@ -1360,16 +1360,16 @@
         },
         {
             "name": "valkyrja/phparkitect",
-            "version": "v26.2.0",
+            "version": "v26.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/valkyrjaio/phparkitect.git",
-                "reference": "bd93b9db9a4b98989808307f24d04e105de004ad"
+                "reference": "4c864531301ae0f35ff057fd57a114518e881676"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/valkyrjaio/phparkitect/zipball/bd93b9db9a4b98989808307f24d04e105de004ad",
-                "reference": "bd93b9db9a4b98989808307f24d04e105de004ad",
+                "url": "https://api.github.com/repos/valkyrjaio/phparkitect/zipball/4c864531301ae0f35ff057fd57a114518e881676",
+                "reference": "4c864531301ae0f35ff057fd57a114518e881676",
                 "shasum": ""
             },
             "require": {
@@ -1401,9 +1401,9 @@
             ],
             "support": {
                 "issues": "https://github.com/valkyrjaio/phparkitect/issues",
-                "source": "https://github.com/valkyrjaio/phparkitect/tree/v26.2.0"
+                "source": "https://github.com/valkyrjaio/phparkitect/tree/v26.2.1"
             },
-            "time": "2026-04-16T04:41:44+00:00"
+            "time": "2026-04-16T05:47:22+00:00"
         },
         {
             "name": "webmozart/assert",
