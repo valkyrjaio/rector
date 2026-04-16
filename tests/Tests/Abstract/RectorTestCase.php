@@ -13,11 +13,11 @@ declare(strict_types=1);
 
 namespace Valkyrja\Rector\Tests\Abstract;
 
-use PHPUnit\Framework\TestCase;
+use Valkyrja\PhpUnit\Abstract\ValkyrjaTestCase;
 
 /**
  * Test case for tests.
  */
-abstract class RectorTestCase extends TestCase
+abstract class RectorTestCase extends ValkyrjaTestCase
 {
 }
