@@ -16,9 +16,7 @@
     }
   ],
   "require"           : {
-    "php" : ">=8.4"
-  },
-  "require-dev"       : {
+    "php"           : ">=8.4",
     "rector/rector" : "^2.4.1"
   },
   "autoload"          : {
