@@ -1,0 +1,70 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "90f1d96696df8b4c77ade68d7c2b322f",
+    "packages": [],
+    "packages-dev": [
+        {
+            "name": "valkyrja/phpstan",
+            "version": "v26.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/valkyrjaio/phpstan.git",
+                "reference": "da5fa9cd8e29772eb0d20d154bc7d2faadad6eb3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/valkyrjaio/phpstan/zipball/da5fa9cd8e29772eb0d20d154bc7d2faadad6eb3",
+                "reference": "da5fa9cd8e29772eb0d20d154bc7d2faadad6eb3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.4"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^2.1.48"
+            },
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "Valkyrja\\PhpStan\\": "src/PhpStan"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Melech Mizrachi",
+                    "email": "melechmizrachi@gmail.com"
+                }
+            ],
+            "description": "PHPStan for the Valkyrja Project.",
+            "homepage": "https://www.valkyrja.io/",
+            "keywords": [
+                "PHPStan",
+                "ci",
+                "valkyrja"
+            ],
+            "support": {
+                "issues": "https://github.com/valkyrjaio/phpstan/issues",
+                "source": "https://github.com/valkyrjaio/phpstan/tree/v26.0.2"
+            },
+            "time": "2026-04-16T04:17:44+00:00"
+        }
+    ],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {},
+    "prefer-stable": true,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=8.4"
+    },
+    "platform-dev": {},
+    "plugin-api-version": "2.9.0"
+}
