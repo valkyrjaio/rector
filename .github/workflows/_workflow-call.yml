@@ -7,6 +7,10 @@ on:
         description: 'Whether to post a PR comment on failure (and delete it on success)'
         type: boolean
         default: true
+      composer-options:
+        description: 'Additional options to pass to all Composer install steps (e.g. --ignore-platform-req=ext-openswoole)'
+        type: string
+        default: ''
       php-version:
         description: 'PHP version to use'
         type: string
@@ -68,14 +72,14 @@ jobs:
         if: steps.changes.outputs.files == 'true'
         uses: ramsey/composer-install@v3
         with:
-          composer-options: --prefer-dist --no-progress
+          composer-options: ${{ inputs.composer-options }} --prefer-dist --no-progress
           custom-cache-suffix: $(date -u "+%Y-%m")
 
       - name: Install Rector Composer dependencies
         if: steps.changes.outputs.files == 'true'
         uses: ramsey/composer-install@v3
         with:
-          composer-options: --prefer-dist --no-progress
+          composer-options: ${{ inputs.composer-options }} --prefer-dist --no-progress
           custom-cache-suffix: $(date -u "+%Y-%m")
           working-directory: ${{ inputs.ci-directory }}
 
