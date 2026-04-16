@@ -20,11 +20,9 @@ jobs:
       paths: |
         ci:
           - '.github/ci/phpunit/**'
-          - '.github/ci/root-and-suggested/**'
           - '.github/workflows/phpunit.yml'
         files:
           - '.github/ci/phpunit/**'
-          - '.github/ci/root-and-suggested/**'
           - '.github/workflows/phpunit.yml'
           - 'bin/valkyrja'
           - 'functions/**/*.php'
