@@ -1,7 +1,7 @@
 {
   "require"           : {
     "php" : ">=8.4",
-    "valkyrja/phparkitect" : "^26.1.1",
+    "valkyrja/phparkitect" : "^26.1.3",
     "phparkitect/phparkitect" : "^0.8.0"
   },
   "scripts"           : {

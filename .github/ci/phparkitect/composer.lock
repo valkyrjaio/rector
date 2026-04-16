@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "add4d57201f28b2d685c2727a3005543",
+    "content-hash": "71f265a3f4f9b5f9e4b4dda515d7d6a0",
     "packages": [
         {
             "name": "nikic/php-parser",
@@ -1359,16 +1359,16 @@
         },
         {
             "name": "valkyrja/phparkitect",
-            "version": "v26.1.1",
+            "version": "v26.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/valkyrjaio/phparkitect.git",
-                "reference": "3c4f75f451cad23e195c96bb4a29dd4864a3c611"
+                "reference": "62f394180d68deba7dd8eae7c136b1c879ae986c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/valkyrjaio/phparkitect/zipball/3c4f75f451cad23e195c96bb4a29dd4864a3c611",
-                "reference": "3c4f75f451cad23e195c96bb4a29dd4864a3c611",
+                "url": "https://api.github.com/repos/valkyrjaio/phparkitect/zipball/62f394180d68deba7dd8eae7c136b1c879ae986c",
+                "reference": "62f394180d68deba7dd8eae7c136b1c879ae986c",
                 "shasum": ""
             },
             "require": {
@@ -1400,9 +1400,9 @@
             ],
             "support": {
                 "issues": "https://github.com/valkyrjaio/phparkitect/issues",
-                "source": "https://github.com/valkyrjaio/phparkitect/tree/v26.1.1"
+                "source": "https://github.com/valkyrjaio/phparkitect/tree/v26.1.3"
             },
-            "time": "2026-04-15T22:09:59+00:00"
+            "time": "2026-04-16T02:31:16+00:00"
         },
         {
             "name": "webmozart/assert",
