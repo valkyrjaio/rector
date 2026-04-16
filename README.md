@@ -54,9 +54,7 @@ Build Status
             <td>
                 <a href="https://github.com/valkyrjaio/rector/actions/workflows/phpunit.yml?query=branch%3Amaster"><img src="https://github.com/valkyrjaio/rector/actions/workflows/phpunit.yml/badge.svg?branch=master" alt="PHPUnit Build Status"></a>
             </td>
-            <td>
-                <a href="https://github.com/valkyrjaio/rector/actions/workflows/validate-composer.yml?query=branch%3Amaster"><img src="https://github.com/valkyrjaio/rector/actions/workflows/validate-composer.yml/badge.svg?branch=master" alt="Validate Composer Build Status"></a>
-            </td>
+            <td></td>
         </tr>
     </tbody>
 </table>
