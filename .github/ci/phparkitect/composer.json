@@ -1,0 +1,12 @@
+{
+  "require"           : {
+    "php" : ">=8.4",
+    "valkyrja/phparkitect" : "^26.1.1",
+    "phparkitect/phparkitect" : "^0.8.0"
+  },
+  "scripts"           : {
+    "check" : "vendor/bin/phparkitect check --config=phparkitect.php"
+  },
+  "minimum-stability" : "dev",
+  "prefer-stable"     : true
+}
