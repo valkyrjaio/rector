@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the Valkyrja Framework package.
+ * This file is part of the Valkyrja Rector package.
  *
  * (c) Melech Mizrachi <melechmizrachi@gmail.com>
  *
@@ -13,6 +13,10 @@ declare(strict_types=1);
 
 namespace Valkyrja\Rector\CodingStyle\Rector\Stmt;
 
+use PhpParser\Node\Stmt\Class_;
+use PhpParser\Node\Stmt\Interface_;
+use PhpParser\Node\Stmt\Trait_;
+use PhpParser\Node\Stmt\Enum_;
 use PhpParser\Comment\Doc;
 use PhpParser\Node;
 use PhpParser\Node\Identifier;
@@ -94,10 +98,10 @@ final class RemoveNonConflictingAliasInUseStatementRector extends AbstractRector
             foreach ($node->stmts as $compareStmt) {
                 if (
                     (
-                        $compareStmt instanceof Node\Stmt\Class_
-                        || $compareStmt instanceof Node\Stmt\Interface_
-                        || $compareStmt instanceof Node\Stmt\Trait_
-                        || $compareStmt instanceof Node\Stmt\Enum_
+                        $compareStmt instanceof Class_
+                        || $compareStmt instanceof Interface_
+                        || $compareStmt instanceof Trait_
+                        || $compareStmt instanceof Enum_
                     )
                     && $compareStmt->name?->name !== null
                     // Ensure the alias's class name does not match the class/interface/trait/enum class name
