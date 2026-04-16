@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the Valkyrja Rector package.
+ * This file is part of the Valkyrja Framework package.
  *
  * (c) Melech Mizrachi <melechmizrachi@gmail.com>
  *
@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace Valkyrja\Rector\CodingStyle\Rector\Stmt;
 
+use Nette\Utils\Strings;
 use PhpParser\Comment\Doc;
 use PhpParser\Node;
 use PhpParser\Node\Identifier;
@@ -26,7 +27,6 @@ use PhpParser\Node\Stmt\Use_;
 use PhpParser\NodeFinder;
 use Rector\PhpParser\Node\FileNode;
 use Rector\Rector\AbstractRector;
-use RectorPrefix202604\Nette\Utils\Strings;
 use Symplify\RuleDocGenerator\Exception\PoorDocumentationException;
 use Symplify\RuleDocGenerator\ValueObject\CodeSample\CodeSample;
 use Symplify\RuleDocGenerator\ValueObject\RuleDefinition;
