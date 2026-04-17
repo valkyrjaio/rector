@@ -186,3 +186,46 @@ class Foo
 An alias is preserved whenever it would cause a naming conflict — for example
 when two imports share the same short name, or when the short name clashes with
 the file's own class name.
+
+## Workflows
+
+The [`_workflow-call.yml`](.github/workflows/_workflow-call.yml) reusable
+workflow runs Rector against the calling repository's source. It is designed to
+be called from other repositories via `workflow_call`.
+
+### Inputs
+
+| Input              | Type    | Default               | Description                                                                                                                                           |
+|--------------------|---------|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `paths`            | string  | —                     | **Required.** YAML filter spec with two keys: `ci` (CI config files that trigger a base-branch fetch) and `files` (all files that trigger the check). |
+| `post-pr-comment`  | boolean | `true`                | Post a PR comment on failure and remove it on success. Disable when the calling workflow handles its own reporting.                                   |
+| `composer-options` | string  | `''`                  | Extra flags passed to every `composer install` step (e.g. `--ignore-platform-req=ext-openswoole`).                                                    |
+| `php-version`      | string  | `'8.4'`               | PHP version to use.                                                                                                                                   |
+| `ci-directory`     | string  | `'.github/ci/rector'` | Path to the CI directory containing `composer.json` and the tool config.                                                                              |
+| `extensions`       | string  | `'mbstring, intl'`    | PHP extensions to install via `shivammathur/setup-php`.                                                                                               |
+
+### Usage
+
+```yaml
+jobs:
+  rector:
+    uses: valkyrjaio/rector/.github/workflows/_workflow-call.yml@master
+    permissions:
+      pull-requests: write
+      contents: read
+    with:
+      php-version: '8.4'
+      paths: |
+        ci:
+          - '.github/ci/rector/**'
+          - '.github/workflows/rector.yml'
+        files:
+          - '.github/ci/rector/**'
+          - '.github/workflows/rector.yml'
+          - 'src/**/*.php'
+          - 'composer.json'
+    secrets: inherit
+```
+
+`secrets: inherit` is required to pass the `VALKYRJA_GHA_APP_ID` and
+`VALKYRJA_GHA_PRIVATE_KEY` org secrets used for PR comments.
