@@ -4,84 +4,46 @@
 
 # Valkyrja Rector
 
-Rector configuration and custom rules for the Valkyrja project.
+Shared Rector configuration for Valkyrja PHP projects — a reusable rule set,
+custom Rector rules, and a workflow that enforce consistent automated
+refactoring across consuming repositories.
 
 <p>
     <a href="https://packagist.org/packages/valkyrja/rector"><img src="https://poser.pugx.org/valkyrja/rector/require/php" alt="PHP Version Require"></a>
     <a href="https://packagist.org/packages/valkyrja/rector"><img src="https://poser.pugx.org/valkyrja/rector/v" alt="Latest Stable Version"></a>
     <a href="https://packagist.org/packages/valkyrja/rector"><img src="https://poser.pugx.org/valkyrja/rector/license" alt="License"></a>
-    <!-- <a href="https://packagist.org/packages/valkyrja/rector"><img src="https://poser.pugx.org/valkyrja/rector/downloads" alt="Total Downloads"></a>-->
-    <a href="https://scrutinizer-ci.com/g/valkyrjaio/rector/?branch=26.x"><img src="https://scrutinizer-ci.com/g/valkyrjaio/rector/badges/quality-score.png?b=26.x" alt="Scrutinizer"></a>
-    <a href="https://coveralls.io/github/valkyrjaio/rector?branch=26.x"><img src="https://coveralls.io/repos/github/valkyrjaio/rector/badge.svg?branch=26.x" alt="Coverage Status" /></a>
-    <a href="https://shepherd.dev/github/valkyrjaio/rector"><img src="https://shepherd.dev/github/valkyrjaio/rector/coverage.svg" alt="Psalm Shepherd" /></a>
+    <a href="https://github.com/valkyrjaio/ci-rector-php/actions/workflows/ci.yml?query=branch%3A26.x"><img src="https://github.com/valkyrjaio/ci-rector-php/actions/workflows/ci.yml/badge.svg?branch=26.x" alt="CI Status"></a>
+    <a href="https://scrutinizer-ci.com/g/valkyrjaio/ci-rector-php/?branch=26.x"><img src="https://scrutinizer-ci.com/g/valkyrjaio/ci-rector-php/badges/quality-score.png?b=26.x" alt="Scrutinizer"></a>
+    <a href="https://coveralls.io/github/valkyrjaio/ci-rector-php?branch=26.x"><img src="https://coveralls.io/repos/github/valkyrjaio/ci-rector-php/badge.svg?branch=26.x" alt="Coverage Status" /></a>
+    <a href="https://shepherd.dev/github/valkyrjaio/ci-rector-php"><img src="https://shepherd.dev/github/valkyrjaio/ci-rector-php/coverage.svg" alt="Psalm Shepherd" /></a>
     <a href="https://sonarcloud.io/summary/new_code?id=valkyrjaio_rector"><img src="https://sonarcloud.io/api/project_badges/measure?project=valkyrjaio_rector&metric=sqale_rating" alt="Maintainability Rating" /></a>
 </p>
 
-Build Status
-------------
-
-<table>
-    <tbody>
-        <tr>
-            <td>Linting</td>
-            <td>    
-                <a href="https://github.com/valkyrjaio/rector/actions/workflows/phpcodesniffer.yml?query=branch%3A26.x"><img src="https://github.com/valkyrjaio/rector/actions/workflows/phpcodesniffer.yml/badge.svg?branch=26.x" alt="PHP Code Sniffer Build Status"></a>
-            </td>
-            <td>
-                <a href="https://github.com/valkyrjaio/rector/actions/workflows/phpcsfixer.yml?query=branch%3A26.x"><img src="https://github.com/valkyrjaio/rector/actions/workflows/phpcsfixer.yml/badge.svg?branch=26.x" alt="PHP CS Fixer Build Status"></a>
-            </td>
-        </tr>
-        <tr>
-            <td>Coding Rules</td>
-            <td>
-                <a href="https://github.com/valkyrjaio/rector/actions/workflows/phparkitect.yml?query=branch%3A26.x"><img src="https://github.com/valkyrjaio/rector/actions/workflows/phparkitect.yml/badge.svg?branch=26.x" alt="PHPArkitect Build Status"></a>
-            </td>
-            <td>
-                <a href="https://github.com/valkyrjaio/rector/actions/workflows/rector.yml?query=branch%3A26.x"><img src="https://github.com/valkyrjaio/rector/actions/workflows/rector.yml/badge.svg?branch=26.x" alt="Rector Build Status"></a>
-            </td>
-        </tr>
-        <tr>
-            <td>Static Analysis</td>
-            <td>
-                <a href="https://github.com/valkyrjaio/rector/actions/workflows/phpstan.yml?query=branch%3A26.x"><img src="https://github.com/valkyrjaio/rector/actions/workflows/phpstan.yml/badge.svg?branch=26.x" alt="PHPStan Build Status"></a>
-            </td>
-            <td>
-                <a href="https://github.com/valkyrjaio/rector/actions/workflows/psalm.yml?query=branch%3A26.x"><img src="https://github.com/valkyrjaio/rector/actions/workflows/psalm.yml/badge.svg?branch=26.x" alt="Psalm Build Status"></a>
-            </td>
-        </tr>
-        <tr>
-            <td>Testing</td>
-            <td>
-                <a href="https://github.com/valkyrjaio/rector/actions/workflows/phpunit.yml?query=branch%3A26.x"><img src="https://github.com/valkyrjaio/rector/actions/workflows/phpunit.yml/badge.svg?branch=26.x" alt="PHPUnit Build Status"></a>
-            </td>
-            <td></td>
-        </tr>
-    </tbody>
-</table>
-
-## Overview
+Overview
+--------
 
 This repository contains two things:
 
-1. **`Valkyrja\Rector\Rules`** — a reusable `RectorConfigBuilder` factory that
-   wires up all rules used across the Valkyrja monorepo. Drop it into any
-   `rector.php` config and set your paths on the returned builder.
+1. **`Valkyrja\Rector\Rules`** — a reusable `RectorConfigBuilder` factory
+   that wires up all rules used across the Valkyrja monorepo. Drop it into
+   any `rector.php` config and set your paths on the returned builder.
+2. **Custom Rector rules** — project-specific refactoring rules that fill
+   gaps in the built-in Rector library.
 
-2. **Custom Rector rules** — project-specific refactoring rules that fill gaps
-   in the built-in Rector library.
+Installation
+------------
 
-## Installation
-
-```bash
+```
 composer require valkyrja/rector
 ```
 
-## Usage
+Usage
+-----
 
-Call `Rules::getConfig()` from your `rector.php` configuration file and set the
-source paths on the returned builder:
+Call `Rules::getConfig()` from your `rector.php` configuration file and set
+the source paths on the returned builder:
 
-```php
+```
 // rector.php
 use Valkyrja\Rector\Rules;
 
@@ -92,23 +54,24 @@ return Rules::getConfig()
     ]);
 ```
 
-`getConfig()` takes no arguments and returns a `RectorConfigBuilder`. Chain any
-additional Rector configuration — paths, skip rules, PHP version sets, etc. —
-directly on the returned builder before returning it.
+`getConfig()` takes no arguments and returns a `RectorConfigBuilder`. Chain
+any additional Rector configuration — paths, skip rules, PHP version sets,
+etc. — directly on the returned builder before returning it.
 
 Run Rector as normal:
 
-```bash
+```
 vendor/bin/rector process
 ```
 
 Or in dry-run mode to preview changes without writing them:
 
-```bash
+```
 vendor/bin/rector process --dry-run
 ```
 
-## Configuration Details
+Configuration Details
+---------------------
 
 ### Parallel Execution
 
@@ -119,7 +82,8 @@ across multiple worker processes.
 
 `withImportNames(removeUnusedImports: true)` is set, so Rector will:
 
-- Add fully-qualified `use` imports for any names that aren't already imported
+- Add fully-qualified `use` imports for any names that aren't already
+  imported
 - Remove `use` statements that are no longer referenced
 
 ### Rules
@@ -142,28 +106,28 @@ across multiple worker processes.
 
 #### Custom Rules
 
-### `RemoveNonConflictingAliasInUseStatementRector`
+##### `RemoveNonConflictingAliasInUseStatementRector`
 
 `Valkyrja\Rector\CodingStyle\Rector\Stmt\RemoveNonConflictingAliasInUseStatementRector`
 
-Removes aliases from `use` statements when the alias serves no purpose — i.e.
-when nothing in the file would conflict if the alias were dropped.
+Removes aliases from `use` statements when the alias serves no purpose —
+i.e. when nothing in the file would conflict if the alias were dropped.
 
-The built-in `RemoveUselessAliasInUseStatementRector` only removes an alias when
-it is identical to the imported class's short name. This rule goes further: it
-removes the alias whenever keeping it is unnecessary, checking for conflicts
-against:
+The built-in `RemoveUselessAliasInUseStatementRector` only removes an alias
+when it is identical to the imported class's short name. This rule goes
+further: it removes the alias whenever keeping it is unnecessary, checking
+for conflicts against:
 
 - Other `use` statements in the file (by class name and by alias)
 - The file's own class, interface, trait, or enum name
 
-When the alias is removed, all references to it throughout the file — including
-PHPDoc comments, type declarations, `extends`, `implements`, and `use` (traits)
-— are rewritten to the unaliased short name.
+When the alias is removed, all references to it throughout the file —
+including PHPDoc comments, type declarations, `extends`, `implements`, and
+`use` (traits) — are rewritten to the unaliased short name.
 
 **Before:**
 
-```php
+```
 use App\Bar as AppBar;
 
 class Foo
@@ -174,7 +138,7 @@ class Foo
 
 **After:**
 
-```php
+```
 use App\Bar;
 
 class Foo
@@ -183,15 +147,16 @@ class Foo
 }
 ```
 
-An alias is preserved whenever it would cause a naming conflict — for example
-when two imports share the same short name, or when the short name clashes with
-the file's own class name.
+An alias is preserved whenever it would cause a naming conflict — for
+example when two imports share the same short name, or when the short name
+clashes with the file's own class name.
 
-## Workflows
+Workflows
+---------
 
 The [`_workflow-call.yml`](.github/workflows/_workflow-call.yml) reusable
-workflow runs Rector against the calling repository's source. It is designed to
-be called from other repositories via `workflow_call`.
+workflow runs Rector against the calling repository's source. It is
+designed to be called from other repositories via `workflow_call`.
 
 ### Inputs
 
@@ -209,7 +174,7 @@ be called from other repositories via `workflow_call`.
 ```yaml
 jobs:
   rector:
-    uses: valkyrjaio/rector/.github/workflows/_workflow-call.yml@26.x
+    uses: valkyrjaio/ci-rector-php/.github/workflows/_workflow-call.yml@26.x
     permissions:
       pull-requests: write
       contents: read
@@ -229,3 +194,29 @@ jobs:
 
 `secrets: inherit` is required to pass the `VALKYRJA_GHA_APP_ID` and
 `VALKYRJA_GHA_PRIVATE_KEY` org secrets used for PR comments.
+
+Contributing
+------------
+
+See [`CONTRIBUTING.md`][contributing url] for the submission process and
+[`VOCABULARY.md`][vocabulary url] for the terminology used across Valkyrja.
+
+Security Issues
+---------------
+
+If you discover a security vulnerability, please follow our
+[disclosure procedure][security vulnerabilities url].
+
+License
+-------
+
+Licensed under the [MIT license][MIT license url]. See
+[`LICENSE.md`](./LICENSE.md).
+
+[contributing url]: https://github.com/valkyrjaio/.github/blob/master/CONTRIBUTING.md
+
+[vocabulary url]: https://github.com/valkyrjaio/.github/blob/master/VOCABULARY.md
+
+[security vulnerabilities url]: https://github.com/valkyrjaio/.github/blob/master/SECURITY.md
+
+[MIT license url]: https://opensource.org/licenses/MIT
